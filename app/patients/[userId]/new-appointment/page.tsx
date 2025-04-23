@@ -1,13 +1,17 @@
 import Image from "next/image";
 
 import { AppointmentForm } from "@/components/forms/AppointmentForm";
+import { PaymentMethodForm } from "@/components/forms/PaymentMethodForm"; // Add this import
 import { getPatient } from "@/lib/actions/patient.actions";
 
 const Appointment = async ({ params: { userId } }: SearchParamProps) => {
   const patient = await getPatient(userId);
 
   return (
-    <div className="flex h-screen max-h-screen">
+    <div className="flex h-screen max-h-screen relative"> {/* Add relative positioning */}
+      {/* Add the PaymentMethodForm component here */}
+      <PaymentMethodForm />
+      
       <section className="remove-scrollbar container my-auto">
         <div className="sub-container max-w-[860px] flex-1 justify-between">
           <Image
@@ -24,7 +28,7 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
             type="create"
           />
 
-          <p className="copyright mt-10 py-12">© 2024 CarePluse</p>
+          <p className="copyright mt-10 py-12">© 2025 CarePulse</p> {/* Updated to 2025 to match the footer */}
         </div>
       </section>
 

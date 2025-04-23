@@ -39,7 +39,7 @@ const RequestSuccess = async ({
           />
           <h2 className="header mb-6 max-w-[600px] text-center">
             Your <span className="text-green-500">appointment request</span> has
-            been successfully submitted!
+            been successfully submitted and paid!
           </h2>
           <p>We&apos;ll be in touch shortly to confirm.</p>
         </section>
@@ -65,6 +65,16 @@ const RequestSuccess = async ({
             />
             <p> {formatDateTime(appointment.schedule).dateTime}</p>
           </div>
+          <div className="mt-4 border-t border-gray-200 pt-4">
+            <div className="flex justify-between">
+              <p className="font-medium">Payment Status:</p>
+              <p className="text-green-500 font-medium">Paid</p>
+            </div>
+            <div className="flex justify-between mt-1">
+              <p>Amount:</p>
+              <p>$75.00</p>
+            </div>
+          </div>
         </section>
 
         <Button variant="outline" className="shad-primary-btn" asChild>
@@ -73,7 +83,7 @@ const RequestSuccess = async ({
           </Link>
         </Button>
 
-        <p className="copyright">© 2024 CarePluse</p>
+        <p className="copyright">© 2025 CarePluse+</p>
       </div>
     </div>
   );
