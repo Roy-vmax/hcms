@@ -17,7 +17,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui";
+} from "@/components/ui/card"; // Fix import path
 
 // Form validation schema
 const PaymentFormSchema = z.object({
